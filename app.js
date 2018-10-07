@@ -23,6 +23,25 @@ const booksRoutes=require('./routes/books');
 app.use(mainRoutes);
 app.use('/books', booksRoutes);
 
+/* Catch 404 Not Found error */
+app.use((req, res, next) => {
+  const err = new Error('Page Not Found');
+  err.status=404;
+  next(err);
+});
+
+/* add if statement to check if err occ
+urs */
+app.use((err, req, res, next) => {
+  if (err){
+    res.locals.error = err;
+    res.status(err.status);
+    res.render('error',{error:err});
+    next(err);
+  }
+});
+
+
 app.listen(port, () => {
   console.log("The application is running on localhost:" + port);
 });
