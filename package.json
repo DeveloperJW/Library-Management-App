@@ -1,0 +1,33 @@
+{
+  "name": "library-management-app",
+  "version": "1.0.0",
+  "description": "A library management app using Express, Node.js, SQLite and Sequelize",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "library",
+    "management",
+    "SQL",
+    "Express",
+    "Pug",
+    "sequelize"
+  ],
+  "author": "Zhaopeng Wang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.3",
+    "sequelize": "^4.39.0",
+    "sequelize-cli": "^4.1.1",
+    "sqlite3": "^4.0.2"
+  }
+}
