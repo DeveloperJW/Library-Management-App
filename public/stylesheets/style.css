@@ -95,3 +95,48 @@ input[type=text] {
 .error {
   color: rgb(236, 15, 15);
 }
+
+.pagination{
+  margin: 40px 0 0 25%;
+  text-align: left;
+}
+
+.pagination li{
+  display: inline;
+}
+
+.pagination li a{
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 3px 8px;
+  text-decoration: none;
+  color: #4ba6c3;
+}
+
+.pagination li a.active,
+.pagination li a:hover{
+  background-color: #4ba6c3;
+  color: #fff;
+}
+
+.book-search{
+  float: right;
+  position: relative;
+  right:50%;
+}
+
+.book-search input{
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.book-search button{
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: #4ba6c3;
+  color: #fff
+}

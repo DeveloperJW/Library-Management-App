@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
   }).catch(function(error){
     // res.render('error',{error:error})
     res.send(500, error);
-
   });
 });
 
