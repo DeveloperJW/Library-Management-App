@@ -157,7 +157,6 @@ searchButton.addEventListener('click',(event)=>{
     errorMessage.className= 'error-message';
     errorMessage.innerText = "Opps, we do not have that book.";
     table.appendChild(errorMessage);
-    console.log('There is no matching records...')
     pagination.innerHTML=pageInsertHTML(1);
   } else {
     errorMessage.style.display='none';
@@ -172,14 +171,12 @@ searchButton.addEventListener('click',(event)=>{
   newSelected.addEventListener('click',(event)=>{
     if (event.target.tagName ==='A') {
       let newPageNo = parseInt(event.target.textContent);
-      console.log(newPageNo);//bug testing
       assignActive(newPageNo);
       currentPage=newPageNo;
       printRecords();
     }
   });
   //reset match count
-  console.log(searchInput.value);
   matchCount=0;//need to reset this number for another search
   searchInput.value='';//reset the input text
   event.stopPropagation();
