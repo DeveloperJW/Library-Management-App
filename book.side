@@ -1,0 +1,783 @@
+{
+  "id": "67ca8dad-d461-4ffd-b532-6b52bda99ec1",
+  "version": "1.1",
+  "name": "book",
+  "url": "localhost:3000",
+  "tests": [{
+    "id": "f8c259cc-2088-41d4-92a4-b73b1cc6e2ec",
+    "name": "ClickOnTitle",
+    "commands": [{
+      "id": "e8b78b9b-aa5c-44f3-b437-3c7c050e52a2",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "204d5f73-729c-4e8b-8cd9-e124aa78a6ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x712",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd86b6ed-c191-4ac2-9830-39f08f20a80b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Armada",
+      "targets": [
+        ["linkText=A Brief History of Time", "linkText"],
+        ["css=td > a", "css"],
+        ["css=tr:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'A Brief History of Time')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/8')]", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fd346a86-a3fb-4e8f-afb5-22d295f0e4f8",
+    "name": "CreateNewBook",
+    "commands": [{
+      "id": "804d8ad0-747f-4287-8cf1-538eb9729903",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd673e82-8891-462a-bf85-4964460633ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x712",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "286467ea-65cf-420f-9613-cc181b114de5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create New Book",
+      "targets": [
+        ["linkText=Create New Book", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Create New Book')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/new')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1348ec7-13f4-4e24-9b49-f5f0000ad2c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b68cb30-5faf-4594-baf0-6cd5a1b363d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "MyNewBook"
+    }, {
+      "id": "4f57c613-5b78-4442-ab53-8357c86235f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=author", "name"],
+        ["css=#author", "css"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0d8f450-72c0-4ab5-b4ff-8fa04e1b5cc5",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=author", "name"],
+        ["css=#author", "css"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "MyAuthor"
+    }, {
+      "id": "4ebdb560-61d5-4810-bb6a-4b205c3c8e9e",
+      "comment": "",
+      "command": "click",
+      "target": "id=genre",
+      "targets": [
+        ["id=genre", "id"],
+        ["name=genre", "name"],
+        ["css=#genre", "css"],
+        ["css=#genre", "css:finder"],
+        ["xpath=//input[@id='genre']", "xpath:attributes"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ea35072-b3bd-40c7-bd35-8f0860019176",
+      "comment": "",
+      "command": "type",
+      "target": "id=genre",
+      "targets": [
+        ["id=genre", "id"],
+        ["name=genre", "name"],
+        ["css=#genre", "css"],
+        ["css=#genre", "css:finder"],
+        ["xpath=//input[@id='genre']", "xpath:attributes"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "MyGenre"
+    }, {
+      "id": "4dbd9fd2-0f42-4e57-9d49-b1aa3244aa5d",
+      "comment": "",
+      "command": "click",
+      "target": "id=year",
+      "targets": [
+        ["id=year", "id"],
+        ["name=year", "name"],
+        ["css=#year", "css"],
+        ["css=#year", "css:finder"],
+        ["xpath=//input[@id='year']", "xpath:attributes"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6030b5d-ac0d-45f1-9b44-556f6be26e2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=year",
+      "targets": [
+        ["id=year", "id"],
+        ["name=year", "name"],
+        ["css=#year", "css"],
+        ["css=#year", "css:finder"],
+        ["xpath=//input[@id='year']", "xpath:attributes"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "MyYear"
+    }, {
+      "id": "4d655702-a595-4d06-a9f7-752698fbdc8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Create New Book']", "xpath:attributes"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "52742738-5ed0-4397-9f11-f23899c7e73b",
+    "name": "ChangePages",
+    "commands": [{
+      "id": "2ad9f0c7-2aa8-42df-891f-8026fcd052eb",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49b92491-19cb-47b1-922e-94ac67478610",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x712",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66dd6ed7-b939-4694-8c87-e4a9fcb7dd85",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=1",
+      "targets": [
+        ["linkText=1", "linkText"],
+        ["css=a.active", "css"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'1')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e843a5e2-2c42-4a77-9799-0bb584dc636c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=2",
+      "targets": [
+        ["linkText=2", "linkText"],
+        ["css=a.none", "css"],
+        ["css=li:nth-child(2) > .none", "css:finder"],
+        ["xpath=//a[contains(text(),'2')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b501b7f8-6d9f-46da-864c-70dc992b0f91",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=3",
+      "targets": [
+        ["linkText=3", "linkText"],
+        ["css=li:nth-child(3) > .none", "css:finder"],
+        ["xpath=//a[contains(text(),'3')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bed8179-a596-474a-b1c2-9972ac42466c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=4",
+      "targets": [
+        ["linkText=4", "linkText"],
+        ["css=li:nth-child(4) > .none", "css:finder"],
+        ["xpath=//a[contains(text(),'4')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[4]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38e59eca-e831-4b30-92eb-a783f974042a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=1",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "708c3fe4-1c61-4856-8947-49ef4233816b",
+    "name": "SearchBook",
+    "commands": [{
+      "id": "96fb1fdd-debe-4f9f-81f8-1f59933aa0c4",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d347726-a3b6-401c-930a-2578a048cdd5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27b318c7-36dc-47eb-ac40-e2a4f9329560",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css"],
+        ["css=input", "css:finder"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9d7208f-e63a-4153-b4a1-08f9a2dafc61",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css"],
+        ["css=input", "css:finder"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Frankenstein"
+    }, {
+      "id": "ee9ac065-3c7b-4682-bac7-d8c9932127cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css"],
+        ["css=button", "css:finder"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cde81aa1-e6fa-4cb7-84e3-50c65e15fa37",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Frankenstein",
+      "targets": [
+        ["linkText=Emma", "linkText"],
+        ["css=tr:nth-child(3) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Emma')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/15')]", "xpath:href"],
+        ["xpath=//tr[3]/td/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea543ba2-ba96-426b-9849-0b8489e08286",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancel",
+      "targets": [
+        ["linkText=Cancel", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancel')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f53c703e-d5f7-4f69-81b9-3e936de7b4a0",
+    "name": "CreateAndDeleteBook",
+    "commands": [{
+      "id": "fbba27bd-4848-4cde-b909-d03cf67466a2",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35061722-4b1b-423d-ba01-3a8d22b9ff05",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d46bd10-54eb-4d64-b77e-07f016726da5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create New Book",
+      "targets": [
+        ["linkText=Create New Book", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Create New Book')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/new')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47861de2-170b-40f6-83ae-3fbd19cb2234",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebc9a254-fac9-4586-a882-39647bde8d76",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "MyTitle"
+    }, {
+      "id": "1a70590f-afce-4f75-baf9-83501bad3f33",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=author", "name"],
+        ["css=#author", "css"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "MyAuthor"
+    }, {
+      "id": "1830041e-2dca-44e5-a0a9-4d086d008b88",
+      "comment": "",
+      "command": "type",
+      "target": "id=genre",
+      "targets": [
+        ["id=genre", "id"],
+        ["name=genre", "name"],
+        ["css=#genre", "css"],
+        ["css=#genre", "css:finder"],
+        ["xpath=//input[@id='genre']", "xpath:attributes"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "MyGenre"
+    }, {
+      "id": "f22ac94c-593c-43d4-bc73-c6e4fa700edf",
+      "comment": "",
+      "command": "type",
+      "target": "id=year",
+      "targets": [
+        ["id=year", "id"],
+        ["name=year", "name"],
+        ["css=#year", "css"],
+        ["css=#year", "css:finder"],
+        ["xpath=//input[@id='year']", "xpath:attributes"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "MyYear"
+    }, {
+      "id": "6f2166ec-ed90-4fef-9c6c-254b5513a51c",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Create New Book']", "xpath:attributes"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c5f45ea-be68-43a1-a085-7434ba268a62",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6117c9a-aa9b-4d70-8b60-06e619ce70f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(2) > input:nth-child(1)",
+      "targets": [
+        ["css=p:nth-child(2) > input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Delete Book']", "xpath:attributes"],
+        ["xpath=//form[2]/p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "af5a69bc-8eda-4255-9f1b-8dc81e27efc6",
+    "name": "CreateEmptyBook",
+    "commands": [{
+      "id": "a4aadf15-5128-4e65-be88-81f753c30db8",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3320e01-70d6-4371-91ce-1393f7f3ae34",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b991ffc3-e30f-4d2d-9041-f49ad326e571",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create New Book",
+      "targets": [
+        ["linkText=Create New Book", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Create New Book')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/new')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86f89c0a-d815-497a-be20-eae24b11e256",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Create New Book']", "xpath:attributes"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aeb47af8-2b05-464b-97a3-29b35e0df6d6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancel",
+      "targets": [
+        ["linkText=Cancel", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancel')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ad97295f-1c60-491e-83ac-bf9904b370ff",
+    "name": "UpdateBook",
+    "commands": [{
+      "id": "966a2726-662b-44d4-b637-a2e1ed238ca5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9b7e095-795b-4c07-94fc-5f260afacd37",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0dc70c1-dc26-4b97-8a50-dc3d885eddfe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=A Brief History of Time",
+      "targets": [
+        ["linkText=A Brief History of Time", "linkText"],
+        ["css=td > a", "css"],
+        ["css=tr:nth-child(1) a", "css:finder"],
+        ["xpath=//a[contains(text(),'A Brief History of Time')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/8')]", "xpath:href"],
+        ["xpath=//td/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59fb8dc9-162a-464c-9ed2-ff82e623467f",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f27aad90-c575-4c3e-bfa0-4826984a9138",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "A Brief History of Test"
+    }, {
+      "id": "c2ccd153-de47-4f8c-b6e5-855c4411261c",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["css=p:nth-child(5) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Update Book']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62fb7efa-28ee-4e80-be37-b9d3f466ebd8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancel",
+      "targets": [
+        ["linkText=Cancel", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancel')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "899903ad-775c-4569-8891-13e7f744a939",
+    "name": "SearchAndUpdateBook",
+    "commands": [{
+      "id": "ba7ec116-c121-4716-bc9a-47ef4b0d6e3f",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df7363f7-9c22-4e35-858a-7b64b5253647",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6141040f-c117-4611-b744-65cc221834af",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css"],
+        ["css=input", "css:finder"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ba04dcb-8be5-4339-9b22-e0663945f3ef",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css"],
+        ["css=input", "css:finder"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Emma"
+    }, {
+      "id": "34d760d2-3b66-4f25-8c9d-6d8c5e376cd2",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css"],
+        ["css=button", "css:finder"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "383867ac-563b-40b5-9c34-0e35008ef211",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Emma",
+      "targets": [
+        ["linkText=Emma", "linkText"],
+        ["css=tr:nth-child(3) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Emma')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/15')]", "xpath:href"],
+        ["xpath=//tr[3]/td/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9401b03a-d5fe-40c5-bb68-b92addcf16ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "708127b6-a1e5-4c4e-b7c5-2cb647fa46f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=title", "name"],
+        ["css=#title", "css"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Emma 123"
+    }, {
+      "id": "465e71a7-90a5-4314-bce5-6734b73a35f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["css=p:nth-child(5) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Update Book']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a58ee3a8-fc0a-45b1-9fa4-02699f699587",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancel",
+      "targets": [
+        ["linkText=Cancel", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancel')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e00e952-d778-4c21-a7b4-0f9e8e9174ef",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Emma 123",
+      "targets": [
+        ["linkText=Emma 123", "linkText"],
+        ["css=tr:nth-child(3) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Emma 123')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/books/15')]", "xpath:href"],
+        ["xpath=//tr[3]/td/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5eb51bb1-b0b6-41db-bd71-1b9dcf661058",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cancel",
+      "targets": [
+        ["linkText=Cancel", "linkText"],
+        ["css=a.button", "css"],
+        ["css=.button", "css:finder"],
+        ["xpath=//a[contains(text(),'Cancel')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e0dafbf5-2e8e-4fc7-9e5b-982df2bbb017",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f8c259cc-2088-41d4-92a4-b73b1cc6e2ec"]
+  }],
+  "urls": ["localhost:3000"],
+  "plugins": []
+}
