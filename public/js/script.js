@@ -1,6 +1,6 @@
 // Add variables that store DOM elements you will need to reference and/or manipulate
 let currentPage=1;
-const recordsPerPage=6; //only 10 book record will be displayed for each page
+const recordsPerPage=6; //only 6 book record will be displayed for each page
 let allRecords =  document.querySelectorAll('tbody tr'); //select all books records with tbody
 let totalNumOfRecord = allRecords.length;
 const body = document.querySelector('body');
@@ -9,14 +9,12 @@ let filterCollection = allRecords;// when search button is clicked, set this var
 const errorMessage=document.createElement('h3');
 
 
-// Create a function to hide all of the items in the list except for the ten you want to show
-// Tip: Keep in mind that with a list of 54 students, the last page will only display four
 /**
  * First, I am going to hide all records from the page. And call the function to show the required records.
  */
 /**
  * Function getNumOfPages take no parameter and return the total number of pages needed based on
- * the total number of student records and records allowed for each page
+ * the total number of books and records allowed for each page
  * @returns {int}
  */
 const getNumOfPages =() =>{
@@ -44,7 +42,7 @@ body.appendChild(pagination);//append the pagination links as the last child ele
 
 /**
  * Function hidePreviousPages will check if the current page is 1, if the current page is 1. The function do nothing.
- * Else, the function will hide all student records which should displayed on previous pages
+ * Else, the function will hide all book records which should displayed on previous pages
  */
 const hidePreviousPages = (currentPage, collection) =>{
   if (currentPage !== 1){
@@ -56,7 +54,7 @@ const hidePreviousPages = (currentPage, collection) =>{
 
 /**
  * Function hideNextPages will check if the current page is the last page, if the current page is the last page.
- * The function do nothing. Else, the function will hide all student records which should displayed on next pages
+ * The function do nothing. Else, the function will hide all book records which should displayed on next pages
  */
 const hideNextPages = (currentPage, collection) =>{
   for (let i=currentPage*recordsPerPage; i<collection.length; i++){
@@ -77,7 +75,7 @@ const hideAllRecords=() =>{
 };
 
 /**
- * make class active
+ * assign  active class
  */
 const assignActive =(activeNo)=>{
   let activePage = document.querySelectorAll('.pagination ul li a');
@@ -91,7 +89,7 @@ const assignActive =(activeNo)=>{
 };
 
 /**
- * printRecords function
+ * printRecords function reset all records to display, then hide previous pages and next pages
  */
 const printRecords =()=>{
   resetRecords(filterCollection);

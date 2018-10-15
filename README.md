@@ -4,7 +4,7 @@
 
   - This project is created for the purpose of JavaScript Full Stack TechDegree - Unit 08 with TeamTreehouse. 
   
-  - The app has be deployed to herokuapp: 
+  - The app has be deployed to herokuapp: [Click here for live demo](https://agile-citadel-73476.herokuapp.com)
   
   
 - Project Description:
